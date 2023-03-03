@@ -22,6 +22,9 @@ Curso de platzi transiciones con css
 > 💡 Animable: que sus valores cambien gradualmente durante un periodo de tiempo.
 
 ## Pseudo-clases y pseudo-elementos en las animaciones
+
+> 🚀 [HTML Color Codes](https://htmlcolorcodes.com/)
+
 Un trigger es un accionador de animaciones, es decir, el evento inicial que desencadena una animación. Algunos ejemplos son:
 
 * Pasar el mouse sobre un elemento.
