@@ -84,3 +84,14 @@ La pseudo-elemento ::before sirve para agregar un contenido antes del elemento. 
 La pseudo-elemento ::after sirve para agregar un contenido después del elemento. El contenido es agregado mediante la propiedad CSS content.
 
 * Ejemplo usando ::after{target="_blank"}
+
+## Timing Function
+
+Son importantes por que nos hablan de la acelaración de los elementos.
+
+> 🔗 [Easings.net](https://easings.net/)
+> 🔗 [CUbic-bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
+
+## Planos y ejes
+
+Existen 3 ejes x y z,
