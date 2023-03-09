@@ -95,3 +95,16 @@ Son importantes por que nos hablan de la acelaración de los elementos.
 ## Planos y ejes
 
 Existen 3 ejes x y z,
+
+## Transform
+Podemos hacer que los elementos cambien su tamaño o sus caracteristicas iniciales:
+* roten
+* escale
+* etc
+
+
+[🔗 Transform|Can I Use](https://caniuse.com/?search=transform)
+
+[🔗 Gradient Backgrounds](https://cssgradient.io/gradient-backgrounds/)
+
+[🔗 Gradient animaitor](https://www.gradient-animator.com/)
