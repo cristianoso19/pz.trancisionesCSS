@@ -109,3 +109,93 @@ Podemos hacer que los elementos cambien su tamaño o sus caracteristicas inicial
 [🔗 Gradient animaitor](https://www.gradient-animator.com/)
 
 [🔥🔥🔥 Web Animations](https://tympanus.net/codrops/)
+
+## Transform rotate, scale, skew y matrix
+Además de translate, existen otras funciones que permiten transformar el elemento HTML para iniciar una animación.
+<img src="https://media0.giphy.com/media/KRRSOKFINjskbRNENr/giphy.gif?cid=790b7611ee396f136b7b48c308d54e717611117f428e9871&rid=giphy.gif&ct=g">
+
+
+### Rotate para transformaciones
+
+Rotate es una función de la propiedad transform que te permite rotar un elemento HTML a través de los ejes del navegador. El valor que recibe es un ángulo, por ejemplo, “45deg” (45 grados) o “2rad” (2 radianes). Los ángulos positivos están en sentido horario, y los negativos en sentido antihorario.
+
+```css
+selector {
+    transform: rotate(45deg);
+}
+```
+
+<img src="https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/animationland05.PNG">
+
+Dependiendo del eje en el que rotes el elemento, existe una función.
+
+|Tipo	|Valor con los argumentos que recibe |
+|-------|------------------------------------|
+|Eje X y Y|	rotate(angle)|
+|Eje X	|rotateX(angle)
+|Eje Y	|rotateY(angle)
+|Eje Z	|rotateZ(angle)
+|Múltiple	|rotate3d(x,y,z,angle)
+
+[Ejemplo](https://codi.link/PGRpdiBjbGFzcz0iY29udGFpbmVyIj4NCiAgPGRpdiBjbGFzcz0ic2hhZG93Ij4NCiAgPGRpdiBjbGFzcz0icm90YXRlIGVqZVhZIj5yb3RhdGU8L2Rpdj4NCjwvZGl2Pg0KDQo8ZGl2IGNsYXNzPSJzaGFkb3ciPg0KICA8ZGl2IGNsYXNzPSJyb3RhdGUgZWplWCI+cm90YXRlWDwvZGl2Pg0KPC9kaXY+DQoNCjxkaXYgY2xhc3M9InNoYWRvdyI+DQogIDxkaXYgY2xhc3M9InJvdGF0ZSBlamVZIj5yb3RhdGVZPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KDQo=%7CLmNvbnRhaW5lciB7DQogIGRpc3BsYXk6IGZsZXg7DQogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47DQogIGdhcDogM3JlbTsNCiAgd2lkdGg6IDEwMCU7DQogIGhlaWdodDogYXV0bzsNCiAgYWxpZ24taXRlbXM6IGNlbnRlcjsNCn0NCg0KLmNvbnRhaW5lciBkaXZ7DQogIHdpZHRoOiAyMDBweDsNCiAgaGVpZ2h0OiAyMDBweDsNCn0NCg0KLnNoYWRvd3sNCiAgYm9yZGVyOiAxcHggc29saWQgdHJhbnNwYXJlbnQ7DQogIGJhY2tncm91bmQtY29sb3I6IGdyZXk7DQp9DQoNCi5yb3RhdGV7DQogIGRpc3BsYXk6IGdyaWQ7DQogIGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrOw0KICBwbGFjZS1jb250ZW50OiBjZW50ZXI7DQogIGZvbnQtc2l6ZTogMS41cmVtOw0KICBiYWNrZ3JvdW5kLWNvbG9yOiBza3libHVlOw0KICBjdXJzb3I6IHBvaW50ZXI7DQoNCn0NCg0KLyogwqFQcnVlYmEgY29uIGxvIHF1ZSBxdWllcmFzISEgKi8NCi5lamVYWTpob3ZlciB7DQogIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTsNCn0NCg0KLmVqZVg6aG92ZXIgew0KICB0cmFuc2Zvcm06IHJvdGF0ZVgoNDVkZWcpOw0KfQ0KDQouZWplWTpob3ZlciB7DQogIHRyYW5zZm9ybTogcm90YXRlWSg0NWRlZyk7DQp9%7C)
+
+### Scale para transformaciones
+
+Scale es una función de la propiedad transform que te permite escalar un elemento HTML a través de sus ejes. El valor que recibe es un número multiplicador al elemento original.
+
+Si el elemento es igual a 1 entonces sigue como el original; mayor a 1 aumenta de tamaño; y, menor a 1 disminuye de tamaño.
+
+```css
+selector {
+    transform: scale(0.8);
+}
+```
+<img src="https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/animationland06.PNG">
+
+Dependiendo del eje en el que escales el elemento, existe una función.
+
+|Tipo|	Valor con los argumentos que recibe|
+|----|--------------------------------------|
+|Eje X y Y|	scale(x)|
+|Eje X|	scaleX(x)|
+|Eje Y|	scaleY(y)|
+|Eje Z|	scaleZ(z)|
+|Múltiple|	scale3d(x,y,z)|
+
+[Ejemplo](https://codi.link/PGRpdiBjbGFzcz0iY29udGFpbmVyIj4NCiAgPGRpdiBjbGFzcz0ic2hhZG93Ij4NCiAgPGRpdiBjbGFzcz0ic2NhbGUgZWplWFkiPnNjYWxlPC9kaXY+DQo8L2Rpdj4NCg0KPGRpdiBjbGFzcz0ic2hhZG93Ij4NCiAgPGRpdiBjbGFzcz0ic2NhbGUgZWplWCI+c2NhbGVYPC9kaXY+DQo8L2Rpdj4NCg0KPGRpdiBjbGFzcz0ic2hhZG93Ij4NCiAgPGRpdiBjbGFzcz0ic2NhbGUgZWplWSI+c2NhbGVZPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KDQo=%7CLmNvbnRhaW5lciB7DQogIGRpc3BsYXk6IGZsZXg7DQogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47DQogIGdhcDogM3JlbTsNCiAgd2lkdGg6IDEwMCU7DQogIGhlaWdodDogYXV0bzsNCiAgYWxpZ24taXRlbXM6IGNlbnRlcjsNCiAgbWFyZ2luOiAycmVtOw0KfQ0KDQouY29udGFpbmVyIGRpdnsNCiAgd2lkdGg6IDIwMHB4Ow0KICBoZWlnaHQ6IDIwMHB4Ow0KfQ0KDQouc2hhZG93ew0KICBib3JkZXI6IDFweCBzb2xpZCB0cmFuc3BhcmVudDsNCiAgYmFja2dyb3VuZC1jb2xvcjogZ3JleTsNCn0NCg0KLnNjYWxlew0KICBkaXNwbGF5OiBncmlkOw0KICBib3JkZXI6IDFweCBzb2xpZCBibGFjazsNCiAgcGxhY2UtY29udGVudDogY2VudGVyOw0KICBmb250LXNpemU6IDEuNXJlbTsNCiAgYmFja2dyb3VuZC1jb2xvcjogc2t5Ymx1ZTsNCiAgY3Vyc29yOiBwb2ludGVyOw0KDQp9DQoNCi8qIMKhUHJ1ZWJhIGNvbiBsbyBxdWUgcXVpZXJhcyEhICovDQouZWplWFk6aG92ZXIgew0KICB0cmFuc2Zvcm06IHNjYWxlKDEuMik7DQp9DQoNCi5lamVYOmhvdmVyIHsNCiAgdHJhbnNmb3JtOiBzY2FsZVgoMS41KTsNCn0NCg0KLmVqZVk6aG92ZXIgew0KICB0cmFuc2Zvcm06IHNjYWxlWSgwLjgpOw0KfQ==%7C)
+
+### Skew para transformaciones
+Skew es una función de la propiedad transform que te permite torcer un elemento HTML a través de sus ejes en dos dimensiones. El valor que recibe es un ángulo para cada eje en el que el elemento se distorsionará.
+```css
+selector {
+    transform: skew(45deg, 45deg);
+}
+```
+<img src="https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/animationland07.PNG">
+
+|Tipo|	Valor con los argumentos que recibe|
+|----|-------------------------------------|
+|Eje X y Y|	skew(angleX, angleY)|
+|Eje X|	skewX(angle)|
+|Eje Y|	skewY(angle)|
+
+### Matrix para transformaciones
+Matrix es una función de la propiedad transform que te permite realizar varios efectos en uno solo.
+[Documentacion](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
+
+### Orden en el código para transformaciones
+Solamente puede existir una sola propiedad transform en el código de CSS, por lo que si escribimos otra regla CSS con otra transformación, esta se sobreescribirá y solo ejecutará la última. Por ende, utiliza varias funciones en la misma propiedad transform para realizar varias transformaciones.
+
+```css
+/*Mal (solo rotará el elemento)*/
+
+selector {
+    transform: translate(100px,  100px);
+    transform: rotate(45deg);
+ }
+/*Bien (realizará ambas transformaciones)*/
+
+selector {
+    transform: translate(100px, 100px) rotate(45deg);
+}
+```
